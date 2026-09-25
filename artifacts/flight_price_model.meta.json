@@ -1,0 +1,31 @@
+{
+    "model": "RandomForestRegressor",
+    "parameters": {
+        "n_estimators": 100,
+        "random_state": 42
+    },
+    "target": "price",
+    "features": [
+        "airline",
+        "flight",
+        "source_city",
+        "departure_time",
+        "stops",
+        "arrival_time",
+        "destination_city",
+        "class",
+        "duration",
+        "days_left"
+    ],
+    "numeric_features": [
+        "duration",
+        "days_left"
+    ],
+    "categorical_features": [
+        "airline",
+        "departure_time",
+        "stops",
+        "arrival_time",
+        "class"
+    ]
+}
