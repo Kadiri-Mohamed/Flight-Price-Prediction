@@ -1,11 +1,14 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from huggingface_hub import hf_hub_download
 
+model_path = hf_hub_download(
+    repo_id="kadirimed/flight-price-prediction",
+    filename="flight_price_model.joblib"
+)
 
-# 1. Load model + dataset
-
-model = joblib.load("artifacts/flight_price_model.joblib")
+model = joblib.load(model_path)
 
 df = pd.read_csv("data/Clean_Dataset.csv")
 
